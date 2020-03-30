@@ -5,14 +5,14 @@ const server = express();
 const db = require("./db");
 
 //Configure statics files (css, scripts, images)
-server.use(express.static("public"));
+server.use(express.static("./src/public"));
 
 //Enable use req.body
 server.use(express.urlencoded({ extended: true }));
 
 //Configure nunjucks
 const nunjucks = require("nunjucks");
-nunjucks.configure("views", {
+nunjucks.configure("./src/views", {
   express: server,
   noCache: true
 });
