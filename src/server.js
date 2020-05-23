@@ -78,4 +78,4 @@ server.post("/", function(req, res) {
 });
 
 //Start the server in 3000 port
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
